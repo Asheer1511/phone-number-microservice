@@ -15,7 +15,7 @@ import { PhoneNumberSchema, PhoneNumber } from './repo/phone-number.schema';
     {
       provide: 'PhoneNumberModel',
       useFactory: async () => {
-        await connect('mongodb://localhost:27017/phone_numbers_db').catch(
+        await connect('mongodb://localhost:27017/validated_numbers_db').catch(
           (error) => {
             console.error('Failed to connect to MongoDB:', error);
             throw new Error('Database connection error');

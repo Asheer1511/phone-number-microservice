@@ -16,15 +16,23 @@ export class PhoneNumberController {
   ) {}
 
   @Post('validate-phone-numbers')
-  async validatePhoneNumbers(
+  async validateAndSavePhoneNumbers(
     @Body() data: { phoneNumberData: PhoneNumberData[] },
   ): Promise<any[]> {
-    const { phoneNumberData } = data;
+    try {
+      const { phoneNumberData } = data;
 
-    const validatedNumbers =
-      this.phoneNumberService.validatePhoneNumbers(phoneNumberData);
+      console.log('Received phoneNumberData:', phoneNumberData); // Log received data
 
-    // Perform further operations or return validatedNumbers as needed
-    return validatedNumbers;
+      const validatedNumbers =
+        this.phoneNumberService.validateAndSavePhoneNumbers(phoneNumberData);
+
+      console.log('Validated numbers:', validatedNumbers); // Log validated numbers
+
+      return validatedNumbers;
+    } catch (error) {
+      console.error('Error occurred:', error); // Log any errors
+      throw new Error('Validation error');
+    }
   }
 }
