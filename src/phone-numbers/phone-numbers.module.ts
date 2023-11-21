@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // phone-number.module.ts
 
 import { Module } from '@nestjs/common';

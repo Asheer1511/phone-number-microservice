@@ -41,7 +41,6 @@ export class PhoneNumberValidationService {
           countryCode,
           isValid,
           phoneNumberType: PhoneNumberType[phoneNumberType], // Convert number type to string
-          // Add more relevant information as needed
         };
       } catch (error) {
         return {

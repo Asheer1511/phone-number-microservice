@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // phone-numbers.module.ts
 
 import { Module } from '@nestjs/common';
@@ -24,7 +25,6 @@ import { PhoneNumberSchema, PhoneNumber } from './repo/phone-number.schema';
         return connection.model<PhoneNumber>('PhoneNumber', PhoneNumberSchema);
       },
     },
-    // Other providers...
   ],
 })
 export class AppModule {}
