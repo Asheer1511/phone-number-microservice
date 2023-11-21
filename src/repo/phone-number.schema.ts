@@ -8,7 +8,6 @@ export const PhoneNumberSchema = new Schema({
   countryCode: String,
   isValid: Boolean,
   phoneNumberType: String,
-  // Other relevant fields
 });
 
 export interface PhoneNumber extends Document {
@@ -16,5 +15,4 @@ export interface PhoneNumber extends Document {
   countryCode: string;
   isValid: boolean;
   phoneNumberType: string;
-  // Other relevant fields
 }
