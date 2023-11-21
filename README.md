@@ -26,6 +26,16 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Running MongoDB with Docker
+This project uses MongoDB as the database. To run MongoDB using Docker, follow these steps:
+
+Prerequisites
+Install Docker: Docker Installation Guide
+Docker Compose should be included with your Docker installation.
+
+## Start the MongoDB container:
+docker-compose up -d
+
 ## Installation
 
 ```bash
